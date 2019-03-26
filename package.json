@@ -1,0 +1,28 @@
+{
+  "name": "olewnik-plastry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.17.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "browser-sync start --server --files \"./index.html\"\"./assets/css/style.css\"",
+    "compileCss": "sass --watch assets/scss:assets/css",
+    "server": "npm-run-all --parallel compileCss watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gitarzysta92/Olewnik_slices-campaign_webpage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gitarzysta92/Olewnik_slices-campaign_webpage/issues"
+  },
+  "homepage": "https://github.com/Gitarzysta92/Olewnik_slices-campaign_webpage#readme"
+}
