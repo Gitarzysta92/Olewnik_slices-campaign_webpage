@@ -11,9 +11,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "browser-sync start --server --files \"./index.html\"\"./assets/css/style.css\"",
-    "compileCss": "sass --watch assets/scss:assets/css",
-    "server": "npm-run-all --parallel compileCss watch"
+    "watch": "browser-sync start --server --watch --files \"index.html\"\"assets/css/style.css\"",
+    "compileScss": "sass --watch assets/scss:assets/css",
+    "server": "npm-run-all --parallel watch compileScss"
   },
   "repository": {
     "type": "git",
