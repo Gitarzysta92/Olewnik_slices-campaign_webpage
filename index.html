@@ -39,22 +39,29 @@
 <body>
 <header>
 	<div class="inner-container header_wrapper">
-		<div class="header_logo">
+		<div class="header_logo _breakpoint3_hidden">
 			<img src="./archive/images/logo-on-black.png" title="Olewnik plastry" alt="Olewnik logo"/>
 		</div>
-		<div class="header_catchphrase">
+		<div class="header_catchphrase _breakpoint3_hidden">
 			<img src="./archive/images/jedzenie-to-styl-zycia.png" title="Slogan" alt="Jedzenie to styl życia"/>
 		</div>
-		<nav class="header_menu">
+		<div class="mobile-menu-toggle _hidden _breakpoint5_visible">
+			<i class="fas fa-bars"></i>
+		</div>
+		<nav class="header_menu _breakpoint5_hidden">
 			<ul class="menu_rounded inline">
+				<li class="inline-logo _hidden _breakpoint3_visible">
+					<img src="./archive/images/logo.png" />
+				</li>
 				<a href=""><li>Co się kroi?</li></a>
 				<a href=""><li>Produkty</li></a>
 				<a href=""><li>Masz pytanie?</li></a>
+				<a class="_hidden _breakpoint1_visible" href=""><li><i class="fab fa-facebook"></i></li></a>
 			</ul>
 		</nav>
-	</div>
-	<div class="offgrid_fb-shortcut">
+		<div class="offgrid_fb-shortcut _breakpoint1_hidden">
 			<img src="./archive/images/facebook.png" title="Olewnik fanpage" alt="facebook" />
+		</div>
 	</div>
 </header>
 <main>
@@ -105,10 +112,10 @@
 	</div>
 	<div class="container about">
 		<div class="row">
-			<div class="col-6">
+			<div class="col-6 _order2">
 				<img src="./archive/images/krakowska.png" title="" alt="" />
 			</div>
-			<div class="col-6 half-block vertical-align_center-right">
+			<div class="col-6 half-block vertical-align_center-right _order1">
 				<h2>Poznaj nasze plastry</h2>
 				<p class="subline">
 					Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna.
@@ -149,7 +156,7 @@
 		</div>
 		<div class="inner-container">
 			<div class="row">
-				<div class="col-6 half-block vertical-align_center-left dark">
+				<div class="col-6 half-block vertical-align_center-left dark _order2">
 					<h2>Żywiecka kiełbasa sucha</h2>
 					<p class="subline">
 						Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna.
@@ -176,7 +183,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-6 packshot vertical-align_center-right">
+				<div class="col-6 packshot vertical-align_center-right _order1">
 					<img src="./archive/images/krakowska-2.png" title="" alt="" />	
 				</div>
 			</div>

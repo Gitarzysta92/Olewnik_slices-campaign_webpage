@@ -6,6 +6,12 @@ $basic-white: #fff;
 
 $accent-red: #af0000;
 
+/** Layout breakpoints **/
+$breakpoint1: 1440px;
+$breakpoint2: 1270px;
+$breakpoint3: 970px;
+$breakpoint4: 768px;
+$breakpoint5: 590px;
 
 
 /** Typography **/
@@ -38,6 +44,10 @@ html, body, header, main, footer {
 html, body {
 	font-family: Raleway, sans-serif;
 	font-size: 14px;	
+}
+
+main {
+	overflow: hidden;
 }
 
 img {
@@ -102,13 +112,26 @@ a, a:hover {
 .inner-container {
 	width: 1200px;
 	margin: 0 auto;
+	@media (max-width: 1270px) { 
+		& {width: 1000px;}
+	}
+	@media (max-width: 1070px) { 
+		& {width: 900px;}
+	}
+	@media (max-width: 970px) { 
+		& {width: 100%;}
+	}
 }
+
+
+
 
 
 ul[class^='menu_'] {
 	list-style: none;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	padding: 0;
 	&.inline {
 		flex-direction: row;
@@ -173,6 +196,7 @@ ul[class^='menu_'] {
 /** header section **/
 header {
 	position: fixed;
+	box-sizing: border-box;
 	z-index: 5555;
 	.header_wrapper {
 		display: flex;
@@ -180,6 +204,13 @@ header {
 		justify-content: center;
 		align-items: center;
 		padding: 40px 0;
+		@media (max-width: $breakpoint3) { 
+			& { 
+				flex-wrap: wrap;
+				padding: 10px;
+			} 
+		}
+
 		.header_logo {
 			max-width: 30%;
 		}
@@ -192,15 +223,44 @@ header {
 			.menu_rounded {
 				background: $basic-red;
 				border-radius: 15px;
+				overflow: hidden;
+				@media (max-width: $breakpoint3) { & { justify-content: space-between;} }
+				
 				li {
 					color: $basic-white;
 					padding: 20px;
 					&:hover {
 						font-weight: 600;
 					}
+					&.inline-logo {
+						width: 100px;
+						background: $basic-black;
+					}
 				}
 			}
-
+		}
+		.mobile-menu-toggle {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			cursor: pointer;
+			i {
+				font-size: 3rem;
+			}
+			z-index: 9999;
+		}
+		.mobile-menu {
+			position: fixed;
+			top: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			.menu_rounded {
+				width: 100%;
+				height: 100%;
+				border-radius:0px;
+				flex-direction: column;
+			}
 		}
 	}
 	.offgrid_fb-shortcut {
@@ -216,6 +276,7 @@ header {
 	background: url('../../archive/images/background-1.jpg');
 	.row:first-child {
 		padding-top:200px;
+		@media (max-width: $breakpoint3) { & {padding-top: 0;} }
 		box-sizing: border-box;
 		height: 100%;
 		.col {
@@ -243,10 +304,13 @@ header {
 
 	.layer-3 {
 		width: 1400px;
+		.packshot-box {
+			flex-grow:1;
+		}
 		margin: 0 auto;
-		img {transform: scale(1.3);}
+		img {transform: scale(1.4);}
 		.layer-2 {
-			width: 80%;
+			flex-grow:2;
 			.packshot-box {
 				position: relative;
 				z-index: 2222;
@@ -265,6 +329,36 @@ header {
 			}
 		}
 	}
+	
+	@media (max-width: $breakpoint1) { .layer-3 {width: 80%;} }
+	@media (max-width: $breakpoint3) { 
+		.layer-3 {
+			> .packshot-box {
+				display: none;
+			}
+			.layer-2 {
+				.packshot-box {
+					img {transform: scale(1);}
+				}	
+			}
+			
+		} 
+	}
+	@media (max-width: $breakpoint5) {
+		.layer-3 {width: 60%;}
+		.layer-2 {
+			> .packshot-box {
+				display: none;
+			}
+			.layer-1 {
+				.packshot-box {
+					img {transform: scale(1);}
+				}	
+			}
+			
+		} 
+	}
+
 	#first-package {
 		transform: rotate(-10deg) translate(70px, 50px);
 		.extras {
@@ -326,6 +420,18 @@ header {
 	img {
 		margin-top: 100px;
 	}
+	@media (max-width: $breakpoint3) {
+		._order1 {
+			margin-top: 100px;
+			order: 1;
+		} 
+		._order2 {
+			order: 2;
+			img {
+				height: 500px;
+			}
+		} 
+	}
 }
 
 
@@ -335,6 +441,7 @@ header {
 	background: url('../../archive/images/background-2.jpg');
 	.half-block {
 		margin: 300px 0 70px 0;
+		@media (max-width: $breakpoint2) { & {margin: 200px 0 40px 0;} }
 	}
 	.col {
 		text-align: center;
@@ -350,6 +457,7 @@ header {
 	overflow: hidden;
 	.inner-container {
 		padding: 150px 0;
+		@media (max-width: $breakpoint3) { & {padding: 50px 0;} }
 	}
 	.packshot img {
 		height: 80%;
@@ -372,6 +480,22 @@ header {
 			bottom: -120px;
 			right: 20%;
 			z-index: 6666;
+		}
+	}
+	@media (max-width: $breakpoint3) {
+		._order1 {
+			order: 1;
+			margin: 30px 0;
+			img {
+				height: 300px;
+			}
+		} 
+		._order2 {
+			order: 2;
+			
+		}
+		.extras {
+			display: none;
 		}
 	}
 }
@@ -428,6 +552,18 @@ ul.nutrients-tags {
 			justify-content: space-between;
 			height: 700px;
 		}
+		@media (max-width: $breakpoint3) {
+			.vertical-align_center-right,
+			.vertical-align_center-left,
+			.vertical-align_center-center {
+				justify-content: center;
+				height: auto;
+				flex-direction: row;
+				> img {
+					display: none;
+				}
+			}
+		}
 		
 	}
 	.icon-box {
@@ -443,6 +579,15 @@ ul.nutrients-tags {
 		&::after {
 			content: url('../../archive/images/arrow.png');
 			position:absolute;
+			@media (max-width: $breakpoint2) { & { display: none; } }
+		}
+		@media (max-width: $breakpoint3) {
+			& {
+				transform: none!important;
+				width: 200px;
+				box-sizing: border-box;
+				padding: 20px;
+			}
 		}
 	}
 
@@ -496,7 +641,7 @@ ul.nutrients-tags {
 			left: 40%;
 		}
 	}
-
+	@media (max-width: $breakpoint3) { & { display: none; } }
 }
 
 /** fast contact **/
@@ -513,6 +658,7 @@ ul.nutrients-tags {
 
 footer {
 	background: $basic-black;
+	overflow: hidden;
 	.col {
 		padding: 30px 0;
 	}
@@ -528,5 +674,56 @@ footer {
 		a:hover {
 			text-decoration: underline;;
 		}
+		@media (max-width: $breakpoint3) { & { flex-wrap: wrap; } }
 	}
 }
+
+/** Mobile **/
+
+
+@media (max-width: $breakpoint3) { 
+	.row {
+		flex-direction: column;
+	}
+	[class^="col"] {
+		width: 100%;
+		flex: 0 0 100%;
+		align-items: center;
+    	max-width: 100%;
+    	text-align: center;
+	}
+}
+
+
+._hidden {
+	display: none;
+}
+
+
+@media (max-width: $breakpoint1) { 
+	._breakpoint1_hidden { display: none; }
+	._breakpoint1_visible { display: block; }
+}
+
+@media (max-width: $breakpoint2) { 
+	._breakpoint2_hidden { display: none; }
+	._breakpoint2_visible { display: block; }
+}
+
+@media (max-width: $breakpoint3) { 
+	._breakpoint3_hidden { display: none; }
+	._breakpoint3_visible { display: block; }
+}
+
+@media (max-width: $breakpoint4) { 
+	._breakpoint4_hidden { display: none; }
+	._breakpoint4_visible { display: block; }
+}
+
+@media (max-width: $breakpoint5) { 
+	._breakpoint5_hidden { display: none; }
+	._breakpoint5_visible { display: block; }
+}
+
+
+
