@@ -193,11 +193,41 @@ ul[class^='menu_'] {
 }
 
 
+/** dot fixed nav **/
+
+.dot-nav {
+	position: fixed;
+	top: 0;
+	bottom:0;
+	right: 50px;
+	margin: auto;
+	height: 120px;
+	@media (max-width: $breakpoint3) { & {display: none;}}
+	.menu_dotted {
+		li {
+			width: 20px;
+			height: 20px;
+			border-radius: 20px;
+			margin: 10px 0;
+			border: 4px solid $basic-white;
+			&.active {
+				background: $basic-white;
+			}
+		}
+		&.dark li {
+			border-color: $basic-black;
+			&.active {
+				background: $basic-black;
+			}		
+		}
+	}
+}
+
 /** header section **/
 header {
 	position: fixed;
 	box-sizing: border-box;
-	z-index: 5555;
+	z-index: 7777;
 	.header_wrapper {
 		display: flex;
 		flex-direction: row;
@@ -365,6 +395,9 @@ header {
 			top: -30px;
 			left: -70px;
 			z-index: -1;
+			animation-name: example;
+  			animation-duration: 10s;
+  			animation-iteration-count: infinite;
 		}
 	}
 	#second-package {
@@ -372,12 +405,18 @@ header {
 		.extras {
 			top: 10px;
 			left: -250px;
+			animation-name: example;
+  			animation-duration: 10s;
+  			animation-iteration-count: infinite;
 		}
 	}
 	#third-package {
 		.extras {
 			top: 10px;
 			left: 20px;
+			animation-name: example;
+  			animation-duration: 10s;
+  			animation-iteration-count: infinite;
 		}
 	}
 	#fourth-package {
@@ -385,6 +424,9 @@ header {
 		.extras {
 			top: 10px;
 			left: 20px;
+			animation-name: example;
+  			animation-duration: 10s;
+  			animation-iteration-count: infinite;
 		}
 	}
 	#fifth-package {
@@ -393,8 +435,17 @@ header {
 			top: 10px;
 			left: 20px;
 			z-index: -1;
+			animation-name: example;
+  			animation-duration: 10s;
+  			animation-iteration-count: infinite;
 		}
 	}
+}
+
+@keyframes example {
+	0% { transform: translate(20px, 10px) scale(1.5); }
+	50% { transform: translate(40px, 1px) scale(1.5); }
+	100% { transform: translate(20px, 10px) scale(1.5); }
 }
 
 /** video section **/
@@ -533,6 +584,40 @@ ul.nutrients-tags {
 	}
 }
 
+/** products carousel **/
+
+.carousel-control-prev {
+    left: -150px;
+}
+
+.carousel-control-next {
+    right: -150px;
+}
+
+.pointers {
+	position: absolute;
+	@media (max-width: $breakpoint3) {& {position: relative; top: 40px;}}
+	right: 0;
+	bottom: initial;
+	left: initial;
+	list-style: none;
+	li {
+		display: inline-block;
+		cursor: pointer;
+		height: auto;
+		width: auto;
+		text-indent: 0;
+		border-radius: 5px;
+		&.active {
+			transform: scale(1.1);
+		}
+		img {
+			width: 60px;
+		}
+	}
+	
+}
+
 
 /** benefits section **/
 
@@ -568,13 +653,22 @@ ul.nutrients-tags {
 	}
 	.icon-box {
 		position: relative;
+		cursor: pointer;
+		img {
+			transition: transform .3s ease-in-out;
+		}	
 		p {	
 			margin-top: 15px;
 			line-height: 1;
 			font-size: 1.2rem;
+			transition: transform .3s ease-in-out;
 			strong {
 				font-size: 1.2em;
 			}
+		}
+		&:hover {
+			p { transform: scale(1.2); }
+			img { transform: scale(1.2) translate(0, -10px);}
 		}
 		&::after {
 			content: url('../../archive/images/arrow.png');
@@ -583,7 +677,6 @@ ul.nutrients-tags {
 		}
 		@media (max-width: $breakpoint3) {
 			& {
-				transform: none!important;
 				width: 200px;
 				box-sizing: border-box;
 				padding: 20px;

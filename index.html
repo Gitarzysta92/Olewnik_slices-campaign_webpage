@@ -29,247 +29,318 @@
 <!-- Basic JavaScript files -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-
-<!-- Description and possible to use classes inside rwd-on-fly.js -->
-<script type="text/javascript" src="/assets/js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.waypoints.min.js"></script>
 <!-- Bootstrap JavaScript files -->
 <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!-- Description and possible to use classes inside rwd-on-fly.js -->
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+
 </head>
 <body>
-<header>
-	<div class="inner-container header_wrapper">
-		<div class="header_logo _breakpoint3_hidden">
-			<img src="./archive/images/logo-on-black.png" title="Olewnik plastry" alt="Olewnik logo"/>
-		</div>
-		<div class="header_catchphrase _breakpoint3_hidden">
-			<img src="./archive/images/jedzenie-to-styl-zycia.png" title="Slogan" alt="Jedzenie to styl życia"/>
-		</div>
-		<div class="mobile-menu-toggle _hidden _breakpoint5_visible">
-			<i class="fas fa-bars"></i>
-		</div>
-		<nav class="header_menu _breakpoint5_hidden">
-			<ul class="menu_rounded inline">
-				<li class="inline-logo _hidden _breakpoint3_visible">
-					<img src="./archive/images/logo.png" />
-				</li>
-				<a href=""><li>Co się kroi?</li></a>
-				<a href=""><li>Produkty</li></a>
-				<a href=""><li>Masz pytanie?</li></a>
-				<a class="_hidden _breakpoint1_visible" href=""><li><i class="fab fa-facebook"></i></li></a>
-			</ul>
-		</nav>
-		<div class="offgrid_fb-shortcut _breakpoint1_hidden">
-			<img src="./archive/images/facebook.png" title="Olewnik fanpage" alt="facebook" />
-		</div>
-	</div>
-</header>
-<main>
-	<div class="container-fluid fh welcome">
-		<div class="row">
-			<div class="col vertical-align_center-center">
-				<div class="layer-3">
-					<div id="first-package" class="packshot-box">
-						<img src="./archive/images/krakowska_mix.png" title="" alt=""/>
-						<img class="extras" src="./archive/images/plastry-lewa.png" title="" alt=""/>
-					</div>
-					<div class="layer-2">
-						<div id="second-package" class="packshot-box">
-							<img src="./archive/images/krakowska-kielbasa-sucha.png" title="" alt="" />
-							<img class="extras" src="./archive/images/dodatki-1.png" title="" alt=""/>
-						</div>
-						<div class="layer-1">
-							<div id="third-package" class="packshot-box">
-								<img class="extras" src="./archive/images/dodatki-front.png" title="" alt=""/>
-								<img src="./archive/images/krakowska-kielbasa-sucha-z-filetem.png" title="" alt="" />	
-							</div>
-						</div>
-						<div id="fourth-package" class="packshot-box">
-							<img src="./archive/images/krakowska-kielbasa-sucha-z-szynki.png" title="" alt="" />
-							<img class="extras" src="./archive/images/dodatki-1.png" title="" alt=""/>
-						</div>
-					</div>
-					<div id="fifth-package" class="packshot-box">
-						<img src="./archive/images/zywiecka-kielbasa-sucha.png" title="" alt="" />
-						<img class="extras" src="./archive/images/plastry-prawa.png" title="" alt=""/>
-					</div>
-				</div>
+	<header>
+		<div class="inner-container header_wrapper">
+			<div class="header_logo _breakpoint3_hidden">
+				<a class="smooth" data-scroll href="#welcome">
+					<img src="./archive/images/logo-on-black.png" title="Olewnik plastry" alt="Olewnik logo"/>
+				</a>
 			</div>
-		</div>
-		<div class="offgrid_next-link">
-			<a href="">
-				<img src="./archive/images/next-section-button.png" title="" alt="" />
-			</a>
-		</div>
-	</div>
-	<div class="container-fluid video">
-		<div class="row">
-			<video controls>
-			 	<source src="./archive/videos/movie.mp4" type="video/mp4">
-				<source src="./archive/videos/movie.ogg" type="video/ogg">
-			</video>
-		</div>
-	</div>
-	<div class="container about">
-		<div class="row">
-			<div class="col-6 _order2">
-				<img src="./archive/images/krakowska.png" title="" alt="" />
+			<div class="header_catchphrase _breakpoint3_hidden">
+				<img src="./archive/images/jedzenie-to-styl-zycia.png" title="Slogan" alt="Jedzenie to styl życia"/>
 			</div>
-			<div class="col-6 half-block vertical-align_center-right _order1">
-				<h2>Poznaj nasze plastry</h2>
-				<p class="subline">
-					Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna.
-				</p>
-				<p>
-					Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna, vitae consectetur mauris felis eleifend ipsum. Duis sit amet tempor tellus. Sed et gravida lorem. Quisque luctus pharetra purus, eu dapibus diam efficitur et. Vestibulum vitae tellus lectus. 
-				</p>
-				<a target="_blank" href="" class="button_filled red">
-					<i class="fas fa-file-download"></i><span>Pobiesz broszurę</span>
+			<div class="mobile-menu-toggle _hidden _breakpoint5_visible">
+				<i class="fas fa-bars"></i>
+			</div>
+			<nav class="header_menu _breakpoint5_hidden">
+				<ul class="menu_rounded inline">
+					<li class="inline-logo _hidden _breakpoint3_visible">
+						<a data-scroll href="#welcome">
+							<img src="./archive/images/logo.png" />
+						</a>
+					</li>
+					<a class="smooth" data-scroll href="#about"><li>Co się kroi?</li></a>
+					<a class="smooth" data-scroll href="#products"><li>Produkty</li></a>
+					<a class="smooth" data-scroll href="#contact"><li>Masz pytanie?</li></a>
+					<a class="_hidden _breakpoint1_visible" href="https://www.facebook.com/olewnikfanpage/"><li><i class="fab fa-facebook"></i></li></a>
+				</ul>
+			</nav>
+			<div class="offgrid_fb-shortcut _breakpoint1_hidden">
+				<a target="_blank" href="https://www.facebook.com/olewnikfanpage/">
+					<img src="./archive/images/facebook.png" title="Olewnik fanpage" alt="facebook" />
 				</a>
 			</div>
 		</div>
-	</div>
-	<div class="container-fluid eyecatcher">
-		<div class="inner-container">
+		<div class="dot-nav">
+			<ul class="menu_dotted list">
+				<a class="smooth" data-scroll href="#welcome"><li></li></a>
+				<a class="smooth" data-scroll href="#about"><li></li></a>
+				<a class="smooth" data-scroll href="#products"><li></li></a>
+				<a class="smooth" data-scroll href="#contact"><li></li></a>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<div id="welcome" class="container-fluid fh welcome">
 			<div class="row">
-				<div class="col-8"></div>
-				<div class="col-4 half-block vertical-align_center-right dark">
+				<div class="col vertical-align_center-center">
+					<div class="layer-3">
+						<div id="first-package" class="packshot-box">
+							<img src="./archive/images/krakowska_mix.png" title="" alt=""/>
+							<img class="extras" src="./archive/images/plastry-lewa.png" title="" alt=""/>
+						</div>
+						<div class="layer-2">
+							<div id="second-package" class="packshot-box">
+								<img src="./archive/images/krakowska-kielbasa-sucha.png" title="" alt="" />
+								<img class="extras" src="./archive/images/dodatki-1.png" title="" alt=""/>
+							</div>
+							<div class="layer-1">
+								<div id="third-package" class="packshot-box">
+									<img class="extras" src="./archive/images/dodatki-front.png" title="" alt=""/>
+									<img src="./archive/images/krakowska-kielbasa-sucha-z-filetem.png" title="" alt="" />	
+								</div>
+							</div>
+							<div id="fourth-package" class="packshot-box">
+								<img src="./archive/images/krakowska-kielbasa-sucha-z-szynki.png" title="" alt="" />
+								<img class="extras" src="./archive/images/dodatki-1.png" title="" alt=""/>
+							</div>
+						</div>
+						<div id="fifth-package" class="packshot-box">
+							<img src="./archive/images/zywiecka-kielbasa-sucha.png" title="" alt="" />
+							<img class="extras" src="./archive/images/plastry-prawa.png" title="" alt=""/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="offgrid_next-link">
+				<a class="smooth" href="#about">
+					<img src="./archive/images/next-section-button.png" title="" alt="" />
+				</a>
+			</div>
+		</div>
+		<div class="container-fluid video">
+			<div class="row">
+				<video controls>
+					<source src="./archive/videos/movie.mp4" type="video/mp4">
+					<source src="./archive/videos/movie.ogg" type="video/ogg">
+				</video>
+			</div>
+		</div>
+		<div id="about" class="container about">
+			<div class="row">
+				<div class="col-6 _order2">
+					<img src="./archive/images/krakowska.png" title="" alt="" />
+				</div>
+				<div class="col-6 half-block vertical-align_center-right _order1">
 					<h2>Poznaj nasze plastry</h2>
-					<p class="subline">
-						Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna.
-					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<a href="" class="button_outlined white">
-						<span>Czytaj więcej</span><i class="fas fa-angle-down"></i></i>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid products">
-		<div class="extras">
-			<img class="first" src="./archive/images/kanapka-1.png" title="" alt="" />
-			<img class="second" src="./archive/images/plastry-dol.png" title="" alt="" />
-		</div>
-		<div class="inner-container">
-			<div class="row">
-				<div class="col-6 half-block vertical-align_center-left dark _order2">
-					<h2>Żywiecka kiełbasa sucha</h2>
 					<p class="subline">
 						Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna.
 					</p>
 					<p>
 						Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna, vitae consectetur mauris felis eleifend ipsum. Duis sit amet tempor tellus. Sed et gravida lorem. Quisque luctus pharetra purus, eu dapibus diam efficitur et. Vestibulum vitae tellus lectus. 
 					</p>
-					<ul class="nutrients-tags">
-						<li>
-							<p>Kj</p>
-							<p>760</p>
-						</li>
-						<li>
-							<p>Kcal</p>
-							<p>181</p>
-						</li>
-						<li>
-							<p><small>Tłuszcz</small></p>
-							<p>19g</p>
-						</li>
-						<li>
-							<p><small>Kwas<br>tłusczowy</small></p>
-							<p>13g</p>
-						</li>
-					</ul>
-				</div>
-				<div class="col-6 packshot vertical-align_center-right _order1">
-					<img src="./archive/images/krakowska-2.png" title="" alt="" />	
+					<a target="_blank" href="" class="button_filled red">
+						<i class="fas fa-file-download"></i><span>Pobiesz broszurę</span>
+					</a>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container-fluid benefits">
-		<div class="extras">
-			<img class="first" src="./archive/images/kanapka-2.png" title="" alt="" />
-		</div>
-		<div class="inner-container">
-			<div class="row">
-				<div class="col-12 align-center dark section-title">
-					<h2>Co nas wyróżnia</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-4 vertical-align_center-right">
-					<div id="quality" class="icon-box align-center dark">
-						<img src="./archive/images/quality-icon.png" title="" alt="" />
-						<p>Wysoka zawartość <br><strong>białka</strong></p>
-					</div>
-					<div id="natural" class="icon-box align-center dark">
-						<img src="./archive/images/leaf-icon.png" title="" alt="" />
-						<p><strong>Bez dodatku</strong><br>glutaminianu monosodowego<br>i fosforanów</p>
+		<div id='eyecatcher' class="container-fluid eyecatcher">
+			<div class="inner-container">
+				<div class="row">
+					<div class="col-8"></div>
+					<div class="col-4 half-block vertical-align_center-right dark">
+						<h2>Poznaj nasze plastry</h2>
+						<p class="subline">
+							Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna.
+						</p>
 					</div>
 				</div>
-				<div class="col-4 vertical-align_center-center">
-					<div id="extra-dry" class="icon-box align-center dark">
-						<img src="./archive/images/dry-icon.png" title="" alt="" />
-						<p>Suszona minimu <br><strong>100 godzin</strong></p>
-					</div>
-					<img src="./archive/images/wachlarz.png" title="" alt="" />
-					<div id="dye-free" class="icon-box align-center dark">
-						<img src="./archive/images/dye-free-icon.png" title="" alt="" />
-						<p><strong>Bez dodatku</strong><br>barwników</p>
-					</div>
-				</div>
-				<div class="col-4 vertical-align_center-left">
-					<div id="slices" class="icon-box align-center dark">
-						<img src="./archive/images/slices-icon.png" title="" alt="" />
-						<p><strong>30 ekstra cienkich</strong><br>plasterków</p>
-					</div>
-					<div id="crunchy" class="icon-box align-center dark">
-						<img src="./archive/images/sausage-icon.png" title="" alt="" />
-						<p><strong>Wysuszone</strong><br>i bardzo kruche</p>
+				<div class="row">
+					<div class="col">
+						<a href="#products" class="button_outlined white">
+							<span>Czytaj więcej</span><i class="fas fa-angle-down"></i></i>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container-fluid fast-contact">
-		<div class="inner-container dark">
-			<div class="row">
-				<div class="col-7 align-center">
-					<h3>Masz jakieś pytanie? Napisz na:</h3>
-				</div>
-				<div class="col-5 align-center">
-					<a href="mailto:kontakt@olewnik.pl"><h3><strong>kontakt@olewnik.pl</strong></h3></a>
+		<div id="products" class="container-fluid products">
+			<div class="extras">
+				<img class="first" src="./archive/images/kanapka-1.png" title="" alt="" />
+				<img class="second" src="./archive/images/plastry-dol.png" title="" alt="" />
+			</div>
+			<div class="inner-container">
+				<div id="products-carousel" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+					 		<div class="row">
+					 			<div class="col-6 half-block vertical-align_center-left dark _order2">
+									<h2>Żywiecka kiełbasa sucha</h2>
+									<p class="subline">
+										Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna.
+									</p>
+									<p>
+										Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna, vitae consectetur mauris felis eleifend ipsum. Duis sit amet tempor tellus. Sed et gravida lorem. Quisque luctus pharetra purus, eu dapibus diam efficitur et. Vestibulum vitae tellus lectus. 
+									</p>
+									<ul class="nutrients-tags">
+										<li>
+											<p>Kj</p>
+											<p>760</p>
+										</li>
+										<li>
+											<p>Kcal</p>
+											<p>181</p>
+										</li>
+										<li>
+											<p><small>Tłuszcz</small></p>
+											<p>19g</p>
+										</li>
+										<li>
+											<p><small>Kwas<br>tłusczowy</small></p>
+											<p>13g</p>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 packshot vertical-align_center-right _order1">
+									<img src="./archive/images/krakowska-2.png" title="" alt="" />	
+								</div>
+					 		</div>
+						</div>
+						<div class="carousel-item">
+					 		<div class="row">
+					 			<div class="col-6 half-block vertical-align_center-left dark _order2">
+									<h2>Żywiecka kiełbasa sucha</h2>
+									<p class="subline">
+										Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna.
+									</p>
+									<p>
+										Morbi et bibendum orci. Cras cursus, magna in convallis sagittis, turpis arcu iaculis urna, vitae consectetur mauris felis eleifend ipsum. Duis sit amet tempor tellus. Sed et gravida lorem. Quisque luctus pharetra purus, eu dapibus diam efficitur et. Vestibulum vitae tellus lectus. 
+									</p>
+									<ul class="nutrients-tags">
+										<li>
+											<p>Kj</p>
+											<p>760</p>
+										</li>
+										<li>
+											<p>Kcal</p>
+											<p>181</p>
+										</li>
+										<li>
+											<p><small>Tłuszcz</small></p>
+											<p>19g</p>
+										</li>
+										<li>
+											<p><small>Kwas<br>tłusczowy</small></p>
+											<p>13g</p>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 packshot vertical-align_center-right _order1">
+									<img src="./archive/images/krakowska-2.png" title="" alt="" />	
+								</div>
+					 		</div>
+						</div>
+				  	</div>
+				  	<a class="carousel-control-prev" href="#products-carousel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+				  	</a>
+				  	<a class="carousel-control-next" href="#products-carousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+				  	</a>
+				  	<ol class="carousel-indicators pointers">
+						<li data-target="#products-carousel" data-slide-to="0" class="active">
+							<img src="./archive/images/krakowska-2.png" title="" alt="" />	
+						</li>
+						<li data-target="#products-carousel" data-slide-to="1">
+							<img src="./archive/images/krakowska-2.png" title="" alt="" />	
+						</li>
+				  	</ol>
 				</div>	
 			</div>
 		</div>
-	</div>
-</main>
-<footer>
-	<div class="inner-container dark">
-		<div class="row">
-			<div class="col shrink-col">
-				<ul class="menu_social inline">
-					<li class="title">Social media:</li>
-					<a target="_blank" href=""><li>Instagram</li></a>
-					<a target="_blank" href=""><li>Facebook</li></a>
-					<a target="_blank" href=""><li>Youtube</li></a>
-				</ul>
+		<div class="container-fluid benefits">
+			<div class="extras">
+				<img class="first" src="./archive/images/kanapka-2.png" title="" alt="" />
+			</div>
+			<div class="inner-container">
+				<div class="row">
+					<div class="col-12 align-center dark section-title">
+						<h2>Co nas wyróżnia</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 vertical-align_center-right">
+						<div id="quality" class="icon-box align-center dark">
+							<img src="./archive/images/quality-icon.png" title="" alt="" />
+							<p>Wysoka zawartość <br><strong>białka</strong></p>
+						</div>
+						<div id="natural" class="icon-box align-center dark">
+							<img src="./archive/images/leaf-icon.png" title="" alt="" />
+							<p><strong>Bez dodatku</strong><br>glutaminianu monosodowego<br>i fosforanów</p>
+						</div>
+					</div>
+					<div class="col-4 vertical-align_center-center">
+						<div id="extra-dry" class="icon-box align-center dark">
+							<img src="./archive/images/dry-icon.png" title="" alt="" />
+							<p>Suszona minimu <br><strong>100 godzin</strong></p>
+						</div>
+						<img src="./archive/images/wachlarz.png" title="" alt="" />
+						<div id="dye-free" class="icon-box align-center dark">
+							<img src="./archive/images/dye-free-icon.png" title="" alt="" />
+							<p><strong>Bez dodatku</strong><br>barwników</p>
+						</div>
+					</div>
+					<div class="col-4 vertical-align_center-left">
+						<div id="slices" class="icon-box align-center dark">
+							<img src="./archive/images/slices-icon.png" title="" alt="" />
+							<p><strong>30 ekstra cienkich</strong><br>plasterków</p>
+						</div>
+						<div id="crunchy" class="icon-box align-center dark">
+							<img src="./archive/images/sausage-icon.png" title="" alt="" />
+							<p><strong>Wysuszone</strong><br>i bardzo kruche</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col align-center">
-				<img class="first" src="./archive/images/logo-slogan.png" title="" alt="" />
+		<div id="contact" class="container-fluid fast-contact">
+			<div class="inner-container dark">
+				<div class="row">
+					<div class="col-7 align-center">
+						<h3>Masz jakieś pytanie? Napisz na:</h3>
+					</div>
+					<div class="col-5 align-center">
+						<a href="mailto:kontakt@olewnik.pl"><h3><strong>kontakt@olewnik.pl</strong></h3></a>
+					</div>	
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col align-center">
-				<span>Olewnik 2018</span>
+	</main>
+	<footer>
+		<div class="inner-container dark">
+			<div class="row">
+				<div class="col shrink-col">
+					<ul class="menu_social inline">
+						<li class="title">Social media:</li>
+						<a target="_blank" href="https://www.instagram.com/olewnik_pl/"><li>Instagram</li></a>
+						<a target="_blank" href="https://www.facebook.com/olewnikfanpage/"><li>Facebook</li></a>
+						<a target="_blank" href="https://www.youtube.com/channel/UC4xO6BooPPj29NJZEXxISlw"><li>Youtube</li></a>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col align-center">
+					<img class="first" src="./archive/images/logo-slogan.png" title="" alt="" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col align-center">
+					<span>Olewnik 2018</span>
+				</div>
 			</div>
 		</div>
-	</div>
-</footer>
+	</footer>
 </body>	
 </html>

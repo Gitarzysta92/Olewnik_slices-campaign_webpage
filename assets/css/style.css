@@ -167,11 +167,42 @@ ul[class^=menu_] a {
   padding-bottom: 30px;
 }
 
+/** dot fixed nav **/
+.dot-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 50px;
+  margin: auto;
+  height: 120px;
+}
+@media (max-width: 970px) {
+  .dot-nav {
+    display: none;
+  }
+}
+.dot-nav .menu_dotted li {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin: 10px 0;
+  border: 4px solid #fff;
+}
+.dot-nav .menu_dotted li.active {
+  background: #fff;
+}
+.dot-nav .menu_dotted.dark li {
+  border-color: #000;
+}
+.dot-nav .menu_dotted.dark li.active {
+  background: #000;
+}
+
 /** header section **/
 header {
   position: fixed;
   box-sizing: border-box;
-  z-index: 5555;
+  z-index: 7777;
 }
 header .header_wrapper {
   display: flex;
@@ -341,6 +372,9 @@ header .offgrid_fb-shortcut {
   top: -30px;
   left: -70px;
   z-index: -1;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 .welcome #second-package {
   transform: rotate(-5deg) translate(-20px, 15px);
@@ -348,10 +382,16 @@ header .offgrid_fb-shortcut {
 .welcome #second-package .extras {
   top: 10px;
   left: -250px;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 .welcome #third-package .extras {
   top: 10px;
   left: 20px;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 .welcome #fourth-package {
   transform: rotate(5deg) translate(20px, 10px);
@@ -359,6 +399,9 @@ header .offgrid_fb-shortcut {
 .welcome #fourth-package .extras {
   top: 10px;
   left: 20px;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 .welcome #fifth-package {
   transform: rotate(10deg) translate(-60px, 50px);
@@ -367,8 +410,22 @@ header .offgrid_fb-shortcut {
   top: 10px;
   left: 20px;
   z-index: -1;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes example {
+  0% {
+    transform: translate(20px, 10px) scale(1.5);
+  }
+  50% {
+    transform: translate(40px, 1px) scale(1.5);
+  }
+  100% {
+    transform: translate(20px, 10px) scale(1.5);
+  }
+}
 /** video section **/
 .video {
   background: red;
@@ -502,6 +559,43 @@ ul.nutrients-tags li small {
   font-weight: 700;
 }
 
+/** products carousel **/
+.carousel-control-prev {
+  left: -150px;
+}
+
+.carousel-control-next {
+  right: -150px;
+}
+
+.pointers {
+  position: absolute;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  list-style: none;
+}
+@media (max-width: 970px) {
+  .pointers {
+    position: relative;
+    top: 40px;
+  }
+}
+.pointers li {
+  display: inline-block;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  text-indent: 0;
+  border-radius: 5px;
+}
+.pointers li.active {
+  transform: scale(1.1);
+}
+.pointers li img {
+  width: 60px;
+}
+
 /** benefits section **/
 .benefits {
   background: url("../../archive/images/background-3.jpg");
@@ -537,14 +631,25 @@ ul.nutrients-tags li small {
 }
 .benefits .icon-box {
   position: relative;
+  cursor: pointer;
+}
+.benefits .icon-box img {
+  transition: transform 0.3s ease-in-out;
 }
 .benefits .icon-box p {
   margin-top: 15px;
   line-height: 1;
   font-size: 1.2rem;
+  transition: transform 0.3s ease-in-out;
 }
 .benefits .icon-box p strong {
   font-size: 1.2em;
+}
+.benefits .icon-box:hover p {
+  transform: scale(1.2);
+}
+.benefits .icon-box:hover img {
+  transform: scale(1.2) translate(0, -10px);
 }
 .benefits .icon-box::after {
   content: url("../../archive/images/arrow.png");
@@ -557,7 +662,6 @@ ul.nutrients-tags li small {
 }
 @media (max-width: 970px) {
   .benefits .icon-box {
-    transform: none !important;
     width: 200px;
     box-sizing: border-box;
     padding: 20px;
