@@ -237,6 +237,11 @@ header .header_wrapper .header_menu .menu_rounded {
     justify-content: space-between;
   }
 }
+@media (max-width: 590px) {
+  header .header_wrapper .header_menu .menu_rounded {
+    justify-content: center;
+  }
+}
 header .header_wrapper .header_menu .menu_rounded li {
   color: #fff;
   padding: 20px;
@@ -247,6 +252,11 @@ header .header_wrapper .header_menu .menu_rounded li:hover {
 header .header_wrapper .header_menu .menu_rounded li.inline-logo {
   width: 100px;
   background: #000;
+}
+@media (max-width: 970px) {
+  header .header_wrapper .header_menu .menu_rounded li.inline-logo {
+    border-radius: 10px;
+  }
 }
 header .header_wrapper .mobile-menu-toggle {
   position: fixed;
@@ -372,7 +382,7 @@ header .offgrid_fb-shortcut {
   top: -30px;
   left: -70px;
   z-index: -1;
-  animation-name: example;
+  animation-name: animation1;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
@@ -382,14 +392,14 @@ header .offgrid_fb-shortcut {
 .welcome #second-package .extras {
   top: 10px;
   left: -250px;
-  animation-name: example;
+  animation-name: animation2;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
 .welcome #third-package .extras {
   top: 10px;
   left: 20px;
-  animation-name: example;
+  animation-name: animation3;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
@@ -399,7 +409,7 @@ header .offgrid_fb-shortcut {
 .welcome #fourth-package .extras {
   top: 10px;
   left: 20px;
-  animation-name: example;
+  animation-name: animation4;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
@@ -410,12 +420,45 @@ header .offgrid_fb-shortcut {
   top: 10px;
   left: 20px;
   z-index: -1;
-  animation-name: example;
+  animation-name: animation5;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
 
-@keyframes example {
+@keyframes animation1 {
+  0% {
+    transform: translate(20px, 10px) scale(1.5);
+  }
+  50% {
+    transform: translate(40px, 1px) scale(1.5);
+  }
+  100% {
+    transform: translate(20px, 10px) scale(1.5);
+  }
+}
+@keyframes animation2 {
+  0% {
+    transform: translate(-20px, 20px) scale(1.5) rotate(-10deg);
+  }
+  50% {
+    transform: translate(10px, 1px) scale(1.5) rotate(-5deg);
+  }
+  100% {
+    transform: translate(-20px, 20px) scale(1.5) rotate(-10deg);
+  }
+}
+@keyframes animation3 {
+  0% {
+    transform: translate(20px, 10px) scale(1.5) rotate(5deg);
+  }
+  50% {
+    transform: translate(20px, 1px) scale(1.5) rotate(15deg);
+  }
+  100% {
+    transform: translate(20px, 10px) scale(1.5) rotate(5deg);
+  }
+}
+@keyframes animation4 {
   0% {
     transform: translate(20px, 10px) scale(1.5);
   }
@@ -574,6 +617,7 @@ ul.nutrients-tags li small {
   bottom: initial;
   left: initial;
   list-style: none;
+  margin: 0;
 }
 @media (max-width: 970px) {
   .pointers {
@@ -685,6 +729,11 @@ ul.nutrients-tags li small {
 .benefits #crunchy {
   transform: translate(35px);
 }
+@media (max-width: 970px) {
+  .benefits #crunchy {
+    transform: translate(0px);
+  }
+}
 .benefits #crunchy::after {
   transform: rotate(240deg);
   left: -90px;
@@ -697,6 +746,11 @@ ul.nutrients-tags li small {
 }
 .benefits #natural {
   transform: translate(35px);
+}
+@media (max-width: 970px) {
+  .benefits #natural {
+    transform: translate(0px);
+  }
 }
 .benefits #natural::after {
   top: -140px;
@@ -713,7 +767,7 @@ ul.nutrients-tags li small {
   left: 40%;
 }
 @media (max-width: 970px) {
-  .benefits {
+  .benefits .extras {
     display: none;
   }
 }

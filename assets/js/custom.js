@@ -6,11 +6,11 @@ $(document).ready(function() {
 	$('.mobile-menu-toggle').click(function() {
 		$('.header_menu').toggleClass('mobile-menu');
 	})
-	$('.mobile-menu').click(function() {
-		this.removeClass('mobile-menu');
+	$('.header_menu').click(function() {
+		if ($(this).hasClass('mobile-menu')) $(this).removeClass('mobile-menu');
 	});
 
-	// Dots side navigation controller
+	// Side dots navigation controller
 	const dotNav = {
 		darkClass: 'dark',
 		menuWrapper: $('.menu_dotted'),
