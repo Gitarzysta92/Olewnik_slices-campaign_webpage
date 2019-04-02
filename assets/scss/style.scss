@@ -225,7 +225,7 @@ ul[class^='menu_'] {
 
 /** header section **/
 header {
-	position: fixed;
+	position: absolute;
 	box-sizing: border-box;
 	z-index: 7777;
 	.header_wrapper {
@@ -339,24 +339,36 @@ header {
 			flex-grow:1;
 		}
 		margin: 0 auto;
+		transition: transform .2s ease-in-out;
 		img {transform: scale(1.4);}
 		.layer-2 {
+			position: relative;
+			z-index: 2222;
 			flex-grow:2;
+			transition: transform .2s ease-in-out;
 			.packshot-box {
-				position: relative;
-				z-index: 2222;
 				img {transform: scale(1.5);}
 			}
 			.layer-1 {
+				position: relative;
+				z-index: 3333;
 				max-width: 500px;
+				transition: transform .2s ease-in-out;
 				.packshot-box {
-					position: relative;
-					z-index: 3333;
 					img {
 						transform: scale(1.5);
 					}
 				}
 				
+			}
+		}
+		&:hover {
+			transform: scale(1.01);
+			.layer-2 {
+				transform: scale(1.03);
+				.layer-1 {
+					transform: scale(1.06);
+				}
 			}
 		}
 	}
@@ -509,6 +521,7 @@ header {
 
 .eyecatcher {
 	background: url('../../archive/images/background-2.jpg');
+	background-size: cover;
 	.half-block {
 		margin: 300px 0 70px 0;
 		@media (max-width: $breakpoint2) { & {margin: 200px 0 40px 0;} }

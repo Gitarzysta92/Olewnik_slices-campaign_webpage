@@ -200,7 +200,7 @@ ul[class^=menu_] a {
 
 /** header section **/
 header {
-  position: fixed;
+  position: absolute;
   box-sizing: border-box;
   z-index: 7777;
 }
@@ -324,6 +324,7 @@ header .offgrid_fb-shortcut {
 .welcome .layer-3 {
   width: 1400px;
   margin: 0 auto;
+  transition: transform 0.2s ease-in-out;
 }
 .welcome .layer-3 .packshot-box {
   flex-grow: 1;
@@ -332,24 +333,31 @@ header .offgrid_fb-shortcut {
   transform: scale(1.4);
 }
 .welcome .layer-3 .layer-2 {
-  flex-grow: 2;
-}
-.welcome .layer-3 .layer-2 .packshot-box {
   position: relative;
   z-index: 2222;
+  flex-grow: 2;
+  transition: transform 0.2s ease-in-out;
 }
 .welcome .layer-3 .layer-2 .packshot-box img {
   transform: scale(1.5);
 }
 .welcome .layer-3 .layer-2 .layer-1 {
-  max-width: 500px;
-}
-.welcome .layer-3 .layer-2 .layer-1 .packshot-box {
   position: relative;
   z-index: 3333;
+  max-width: 500px;
+  transition: transform 0.2s ease-in-out;
 }
 .welcome .layer-3 .layer-2 .layer-1 .packshot-box img {
   transform: scale(1.5);
+}
+.welcome .layer-3:hover {
+  transform: scale(1.01);
+}
+.welcome .layer-3:hover .layer-2 {
+  transform: scale(1.03);
+}
+.welcome .layer-3:hover .layer-2 .layer-1 {
+  transform: scale(1.06);
 }
 @media (max-width: 1440px) {
   .welcome .layer-3 {
@@ -504,6 +512,7 @@ header .offgrid_fb-shortcut {
 /** eye catcher section **/
 .eyecatcher {
   background: url("../../archive/images/background-2.jpg");
+  background-size: cover;
 }
 .eyecatcher .half-block {
   margin: 300px 0 70px 0;
