@@ -48,6 +48,7 @@ $(document).ready(function() {
 	}
 	dotNav.setActive();
 
+
 	function setCurrentDot(direction) {
 		if (direction === 'down') {
 			dotNav.next();
@@ -58,7 +59,6 @@ $(document).ready(function() {
 	
 	
 	// Define waypoints for document anchors
-
 
 	const about = $('#about').waypoint(function(direction){
 		setCurrentDot(direction);

@@ -140,6 +140,8 @@ ul[class^='menu_'] {
 		flex-direction: column;
 	}
 	a {
+		display: block;
+		height: 100%;
 		color: inherit;
 		text-decoration: none;
 		font-size: 1.2rem;
@@ -254,18 +256,37 @@ header {
 				background: $basic-red;
 				border-radius: 15px;
 				overflow: hidden;
-				@media (max-width: $breakpoint3) { & { justify-content: space-between;} }
+				@media (max-width: $breakpoint3) { 
+					& { 
+						justify-content: space-between;
+					}
+					&:last-child {
+						padding-right: 20px;
+					}
+				}
 				@media (max-width: $breakpoint5) { & { justify-content: center;} }
 				li {
 					color: $basic-white;
-					padding: 20px;
+					height: 70px;
+					a { 
+						height: 100%;
+						line-height: 70px;
+					}
 					&:hover {
 						font-weight: 600;
 					}
 					&.inline-logo {
 						width: 100px;
 						background: $basic-black;
-						@media (max-width: $breakpoint3) { & { border-radius: 10px;} }			    
+						@media (max-width: $breakpoint3) { 
+							& { 
+								border-radius: 10px;
+								text-align: center;
+								img {
+									height: 70%;
+								}
+							} 
+						}			    
 					}
 				}
 			}
@@ -295,7 +316,7 @@ header {
 		}
 	}
 	.offgrid_fb-shortcut {
-		top: 120px;
+		top: 124px;
 		right: 50px;
 
 	}	
@@ -305,6 +326,13 @@ header {
 
 .welcome {
 	background: url('../../archive/images/background-1.jpg');
+	background-size: cover;
+	position: relative;
+	@media (min-aspect-ratio: 21/10) { 
+		& {
+			height: 120vh;
+		} 
+	}
 	.row:first-child {
 		padding-top:200px;
 		@media (max-width: $breakpoint3) { & {padding-top: 0;} }
@@ -335,6 +363,11 @@ header {
 
 	.layer-3 {
 		width: 1400px;
+		@media (max-width: $breakpoint3) { 
+			& {
+				padding-top: 0;
+			} 
+		}
 		.packshot-box {
 			flex-grow:1;
 		}
