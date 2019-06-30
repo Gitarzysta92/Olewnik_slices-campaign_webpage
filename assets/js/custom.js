@@ -32,14 +32,9 @@ $(document).ready(function() {
 					this.dots.eq(i).removeClass('active');
 				}
 			}
-			this.changeColor();
 		},
-		changeColor: function() {
-			if (this.pointer === 1) {
-				this.menuWrapper.addClass(this.darkClass);
-			} else if (this.menuWrapper.hasClass(this.darkClass)) {
-				this.setWhiteColor();
-			}
+		setDarkColor: function() {
+			this.menuWrapper.addClass(this.darkClass);
 		},
 		setWhiteColor: function() {
 			this.menuWrapper.removeClass(this.darkClass);	
@@ -60,28 +55,35 @@ $(document).ready(function() {
 	
 	// Define waypoints for document anchors
 
-	const about = $('#about').waypoint(function(direction){
+
+	$('#about').waypoint(function(direction){
 		setCurrentDot(direction);
+		if (direction === 'down') {
+			dotNav.setDarkColor();
+		} else {
+			dotNav.setWhiteColor();
+		}
 	},{
 		offset: '50%'	
 	})
 
-	const eyecatcher = $('#eyecatcher').waypoint(function(direction){
+	$('#eyecatcher').waypoint(function(direction){	
 		if (direction === 'down') {
 			dotNav.setWhiteColor();
-			console.log("eye");
-		}	
+		} else {
+			dotNav.setDarkColor();
+		}
 	},{
 		offset: '50%'	
 	})
 
-	const products = $('#products').waypoint(function(direction){
+	$('#products').waypoint(function(direction){
 		setCurrentDot(direction);
 	},{
-		offset: '25%'	
+		offset: '50%'	
 	})
 
-	const contact = $('#contact').waypoint(function(direction){
+	$('#contact').waypoint(function(direction){
 		setCurrentDot(direction);
 	},{
 		offset: '25%'	

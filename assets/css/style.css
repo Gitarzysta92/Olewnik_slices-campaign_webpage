@@ -302,8 +302,9 @@ header .offgrid_fb-shortcut {
 /** welcome section **/
 .welcome {
   background: url("../../archive/images/background-1.jpg");
-  background-size: cover;
+  background-color: #383838;
   position: relative;
+  background-size: cover;
 }
 @media (min-aspect-ratio: 21/10) {
   .welcome {
