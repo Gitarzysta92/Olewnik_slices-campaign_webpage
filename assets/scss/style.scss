@@ -1,6 +1,6 @@
 /** Colors scheme **/
 
-$basic-red: red;
+$basic-red: #e11c1b;
 $basic-black: #000;
 $basic-white: #fff;
 
@@ -42,7 +42,7 @@ html, body, header, main, footer {
 }
 
 html, body {
-	font-family: Raleway, sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 14px;	
 }
 
@@ -277,7 +277,6 @@ header {
 					}
 					&.inline-logo {
 						width: 100px;
-						background: $basic-black;
 						@media (max-width: $breakpoint3) { 
 							& { 
 								border-radius: 10px;
@@ -316,7 +315,7 @@ header {
 		}
 	}
 	.offgrid_fb-shortcut {
-		top: 124px;
+		top: 97px;
 		right: 50px;
 
 	}	
@@ -570,7 +569,9 @@ header {
 /** products section **/
 
 .products {
-	background: $basic-red;
+	background-color: $basic-red;
+	background-image: url('../../archive/images/bg-3.png');
+
 	overflow: hidden;
 	.inner-container {
 		padding: 150px 0;
@@ -615,6 +616,10 @@ header {
 			display: none;
 		}
 	}
+}
+
+.products.second { 
+	background: $basic-white;
 }
 
 
@@ -810,7 +815,7 @@ ul.nutrients-tags {
 /** fast contact **/
 
 .fast-contact {
-	background: $basic-red;
+	background: $basic-black;
 	.inner-container {
 		padding: 100px 0;
 	}
@@ -820,7 +825,7 @@ ul.nutrients-tags {
 /** footer **/
 
 footer {
-	background: $basic-black;
+	background: $basic-red;
 	overflow: hidden;
 	.col {
 		padding: 30px 0;
@@ -887,6 +892,18 @@ footer {
 	._breakpoint5_hidden { display: none; }
 	._breakpoint5_visible { display: block; }
 }
+
+
+
+
+
+.carousel-control-prev-icon.custom {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+ }
+ 
+ .carousel-control-next-icon.custom {
+	 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+ }
 
 
 

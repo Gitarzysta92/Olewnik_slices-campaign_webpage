@@ -30,7 +30,7 @@ html, body, header, main, footer {
 }
 
 html, body {
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
 }
 
@@ -148,7 +148,7 @@ ul[class^=menu_] a {
 }
 
 .button_filled.red {
-  background: red;
+  background: #e11c1b;
   color: #fff;
 }
 .button_filled.red:hover {
@@ -230,7 +230,7 @@ header .header_wrapper .header_menu {
   flex-grow: 2;
 }
 header .header_wrapper .header_menu .menu_rounded {
-  background: red;
+  background: #e11c1b;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -260,7 +260,6 @@ header .header_wrapper .header_menu .menu_rounded li:hover {
 }
 header .header_wrapper .header_menu .menu_rounded li.inline-logo {
   width: 100px;
-  background: #000;
 }
 @media (max-width: 970px) {
   header .header_wrapper .header_menu .menu_rounded li.inline-logo {
@@ -295,7 +294,7 @@ header .header_wrapper .mobile-menu .menu_rounded {
   flex-direction: column;
 }
 header .offgrid_fb-shortcut {
-  top: 124px;
+  top: 97px;
   right: 50px;
 }
 
@@ -505,7 +504,7 @@ header .offgrid_fb-shortcut {
 }
 /** video section **/
 .video {
-  background: red;
+  background: #e11c1b;
   color: #fff;
 }
 .video .row {
@@ -555,7 +554,8 @@ header .offgrid_fb-shortcut {
 
 /** products section **/
 .products {
-  background: red;
+  background-color: #e11c1b;
+  background-image: url("../../archive/images/bg-3.png");
   overflow: hidden;
 }
 .products .inner-container {
@@ -605,6 +605,10 @@ header .offgrid_fb-shortcut {
   }
 }
 
+.products.second {
+  background: #fff;
+}
+
 ul.nutrients-tags {
   list-style: none;
   padding: 0;
@@ -628,7 +632,7 @@ ul.nutrients-tags li p {
   height: 50%;
 }
 ul.nutrients-tags li p:last-child {
-  color: red;
+  color: #e11c1b;
   background: #fff;
   font-weight: 900;
   font-size: 1rem;
@@ -809,7 +813,7 @@ ul.nutrients-tags li small {
 
 /** fast contact **/
 .fast-contact {
-  background: red;
+  background: #000;
 }
 .fast-contact .inner-container {
   padding: 100px 0;
@@ -817,7 +821,7 @@ ul.nutrients-tags li small {
 
 /** footer **/
 footer {
-  background: #000;
+  background: #e11c1b;
   overflow: hidden;
 }
 footer .col {
@@ -904,6 +908,13 @@ footer .menu_social a:hover {
   ._breakpoint5_visible {
     display: block;
   }
+}
+.carousel-control-prev-icon.custom {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon.custom {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
 /*# sourceMappingURL=style.css.map */
