@@ -607,6 +607,7 @@ header .offgrid_fb-shortcut {
 
 .products.second {
   background: #fff;
+  background-image: url("../../archive/images/bg-4.png");
 }
 
 ul.nutrients-tags {
@@ -648,6 +649,15 @@ ul.nutrients-tags li small {
 
 .carousel-control-next {
   right: -150px;
+}
+
+.carousel-item p.subline {
+  font-weight: 700;
+}
+
+.carousel-item .fa-chevron-right {
+  font-size: 8px;
+  vertical-align: middle;
 }
 
 .pointers {
